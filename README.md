@@ -1,6 +1,19 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) by Mohammad Ilham Ripandi.
+This is a simple movie application built using React and TypeScript, leveraging The Movie Database (TMDb) API to display movie data.
+
+# Features
+1. Home Page:
+- Display "Now Playing" movies (limited to 6).
+- Display "Popular" movies with a load more button (load 6 more movies at a time).
+- Add movies to Favorites.
+
+2. Profile Page:
+- View list of your favorite movies.
+
+3. Login Page:
+- Login as a user or continue as a guest.
 
 ## Available Scripts
 
