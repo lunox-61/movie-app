@@ -7,12 +7,12 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = () => {
     if (username.trim() === '') {
-      setError('Username is required'); // Set pesan error jika username kosong
+      setError('Username is required'); // Mengatur pesan error jika username kosong
       return;
     }
 
     localStorage.setItem('username', username);
-    window.location.href = '/'; // Redirect to home page
+    window.location.href = '/'; // Mengalihkan ke home page
   };
 
   const continueAsGuest = () => {
@@ -21,7 +21,7 @@ const LoginPage: React.FC = () => {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      handleLogin(); // Panggil fungsi handleLogin saat tombol Enter ditekan
+      handleLogin(); 
     }
   };
 

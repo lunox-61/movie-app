@@ -13,18 +13,18 @@ const HomePage: React.FC = () => {
   const [notification, setNotification] = useState<string | null>(null);
   const [showNotification, setShowNotification] = useState<boolean>(false); 
 
-  // Fetch initial movies (Now Playing and Popular Movies)
+  // Mengambil film yang saat ini diputar (Now Playing and Popular Movies)
   useEffect(() => {
     const fetchMovies = async () => {
       const nowPlayingData = await getNowPlayingMovies();
       setNowPlaying(nowPlayingData.slice(0, 6)); // Set Now Playing movies with limit 6
 
-      // Fetch first two pages of Popular Movies to get 30 movies
+      // Mengambil dua halaman pertama dari Film Populer untuk mendapatkan 30 film
       const popularMoviesPage1 = await getPopularMovies(1);
       const popularMoviesPage2 = await getPopularMovies(2);
       const popularMoviesData = [...popularMoviesPage1, ...popularMoviesPage2];
       
-      // Set popular movies with the first 30 movies
+      // Mengatur film populer dengan 30 film pertama
       setPopularMovies(popularMoviesData.slice(0, 30));
     };
     
@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
       {/* <Header /> */}
       <div className="container mx-auto px-4 py-8">
 
-        {/* Floating notification below header */}
+        {/* Meletakkan posisi notifikasi dibawah header */}
         {notification && (
           <div className={`fixed top-16 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg transition-opacity duration-300 ${showNotification ? 'opacity-100' : 'opacity-0'}`}>
             {notification}

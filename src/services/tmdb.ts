@@ -12,7 +12,7 @@ export const getPopularMovies = async (page: number = 1): Promise<Movie[]> => {
             page: page
         }
     });
-    return response.data.results; // Kembalikan array film
+    return response.data.results; 
 };  
 
 // Fungsi untuk mendapatkan detail film berdasarkan ID
@@ -22,7 +22,7 @@ export const getMovieDetails = async (movieId: number): Promise<Movie> => {
             api_key: API_KEY
         }
     });
-    return response.data; // Pastikan struktur data sesuai dengan interface Movie
+    return response.data; 
 };
 
 // Fungsi untuk mendapatkan film yang sedang tayang
@@ -32,5 +32,5 @@ export const getNowPlayingMovies = async (): Promise<Movie[]> => {
             api_key: API_KEY
         }
     });
-    return response.data.results; // Kembalikan array film
+    return response.data.results; 
 };

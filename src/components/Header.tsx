@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State untuk dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
   const handleLogout = () => {
     localStorage.removeItem('username');
-    window.location.href = '/login'; // Redirect ke halaman login
+    window.location.href = '/login'; 
   };
 
-  const username = localStorage.getItem('username') || 'Guest'; // Menampilkan 'Guest' jika tidak ada username
+  const username = localStorage.getItem('username') || 'Guest'; 
 
   return (
     <header className="bg-blue-600 p-4 text-white flex justify-between items-center relative">
@@ -25,10 +25,10 @@ const Header: React.FC = () => {
           </li>
           <li className="relative">
             <button 
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)} // Toggle dropdown
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
               className="hover:text-gray-200"
             >
-              {username} {/* Tampilkan nama user atau Guest */}
+              {username} {/* Menampilkan nama user atau Guest */}
             </button>
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 bg-white text-black rounded shadow-lg z-10">
